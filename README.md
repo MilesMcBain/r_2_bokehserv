@@ -1,2 +1,2 @@
 # r_2_bokehserv
-R to bokeh  server
+A proof of concept plot pull/push to a [Bokeh server](https://github.com/bokeh/bokeh) from R using `webrockets`(https://github.com/ropenscilabs/webrockets).
