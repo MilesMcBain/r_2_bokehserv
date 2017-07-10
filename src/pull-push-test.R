@@ -8,14 +8,3 @@ new_doc <- doc[[3]]
 new_con <- bokeh_connect(host = "localhost:5006", session_id = "mmtest")
 
 reply <- bokeh_PUSH_DOC(new_con, new_doc) 
-
-# ws.Connect();
-# 
-# // three dataframes. Although metadata and content are empty but they have to be there !
-#   // header 
-# ws.Send("{\"msgid\":\"0001\",\"msgtype\":\"PULL-DOC-REQ\"}");
-# // metadata
-# ws.Send("{}");
-# //content
-# ws.Send("{}");
-
