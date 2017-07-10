@@ -1,8 +1,10 @@
 library(webrockets)
 source("./src/helpers.R")
-con <- bokeh_connect(host = "localhost:5006", session_id = "lr45iEFbKrxhZLssMSx6YurzRe7c1bkA2y4C00kXojkq")
+con <- bokeh_connect(host = "localhost:5006", session_id = "n5MEUfdxh7eJuqOFPxARB5cG47g4X7g8i2z5IdsQPTdu")
 
-xmit_data <- ws_receive_multiple(ws_ptr = con, eventlimit = 30)
+doc <- bokeh_PULL_DOC(con)
+
+jsonlite::prettify(doc[3])
 
 # ws.Connect();
 # 
@@ -13,3 +15,4 @@ xmit_data <- ws_receive_multiple(ws_ptr = con, eventlimit = 30)
 # ws.Send("{}");
 # //content
 # ws.Send("{}");
+
