@@ -1,0 +1,21 @@
+---
+title: "Custom Extension Format"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(webrockets)
+source('./src/helpers.R')
+```
+
+## Get custom extension JSON format from server
+From a running bokeh server serving: https://github.com/bokeh/bokeh/tree/master/examples/app/surface3d
+
+```{r}
+
+con <- bokeh_connect(host = "localhost:5006/main_sf3d", session_id = "c6X6gD0zRP50Y4G5rAJKWcwp6QO0weoHrLdqlvw7J4DK")
+extension_doc <- bokeh_PULL_DOC(con)
+write(x = prettify(extension_doc[2]),file = "./sf3d_extension_pull_doc.json") 
+```
+
